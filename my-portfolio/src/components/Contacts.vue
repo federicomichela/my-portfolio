@@ -1,6 +1,6 @@
 <template>
-  <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
-    <h1>{{ pageName }}</h1>
+  <main class="page">
+    <h1 class="text-center">{{ pageName }}</h1>
 
     <div class="container">
     </div>

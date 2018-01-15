@@ -1,59 +1,45 @@
 <template>
   <div id="app">
-    <!--<router-link :to="{ name: 'HelloWorld' }">World</router-link>-->
-    <!--<router-link to="/uk">Uk</router-link>-->
-    <router-view></router-view>
-
-    <div class="">
+    <main>
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
           <h1 class="display-3">Michela Federico</h1>
           <p class="lead">Full Stack Developer</p>
-          <p>Python, Javascript, JQuery, HTML5, CSS3, Vue.js, Bootstrap, Jinja2, Require.js, Webpack</p>
+          <p class="sub-lead">
+            Python • Javascript • JQuery • HTML5 • CSS3 • Vue.js • Bootstrap • Jinja2 • Require.js • Webpack
+          </p>
         </div>
       </div>
       <div class="container dash-menu">
         <div class="row">
           <div class="col-lg-4 center">
-            <router-link to="/about" class="dash-menu-item rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">person_outline</i>
+            <router-link to="/about" class="dash-menu-item">
+              <div class="rounded-circle">
+                <i class="material-icons md-light md-48 valign-middle">person_outline</i>
+              </div>
+              <h2>About Me</h2>
             </router-link>
           </div>
           <div class="col-lg-4">
-            <router-link to="/works" class="dash-menu-item rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">code</i>
+            <router-link to="/works" class="dash-menu-item">
+              <div  class="rounded-circle">
+                <i class="material-icons md-light md-48 valign-middle">code</i>
+              </div>
+              <h2>My Works</h2>
             </router-link>
           </div>
           <div class="col-lg-4">
-            <router-link to="/contacts" class="dash-menu-item rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">message</i>
+            <router-link to="/contacts" class="dash-menu-item">
+              <div class="rounded-circle">
+                <i class="material-icons md-light md-48 valign-middle">message</i>
+              </div>
+              <h2>Contact Me</h2>
             </router-link>
           </div>
         </div>
       </div>
-
-        <!--
-        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item active">
-              <router-link to="/" class="nav-item">
-                About me
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/projects" class="nav-item">
-                My Projects
-              </router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/contacts" class="nav-item">
-                Contact Me
-              </router-link>
-            </li>
-          </ul>
-        </nav>
-        -->
-    </div>
+    </main>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -87,26 +73,38 @@
     color: #7bcec9;
   }
 
+  .sub-lead { word-spacing: 10px; }
+
+  a:hover, a:active, a:focus, a:visited { text-decoration: none; }
+
   .dash-menu {
     margin-bottom: 1.5rem;
     text-align: center;
   }
 
-  .dash-menu-item {
+  .dash-menu-item .rounded-circle {
     width: 140px;
     height: 140px;
     display: inline-block;
     background-color: #68c7c1;
-    margin-bottom: 10px;
   }
-  .dash-menu-item > .valign-middle { line-height: 140px !important; }
+  .dash-menu-item .rounded-circle > .valign-middle { line-height: 140px !important; }
+  .dash-menu-item > h2 { padding-top: 20px; color: #565656; }
+  .dash-menu-item > h2:hover,
+  .dash-menu-item > h2:active {
+    padding-top: 20px;
+    color: #565656;
+  }
 
-  .dash-menu-item:hover {
+  .dash-menu-item .rounded-circle:hover,
+  .dash-menu-item .rounded-circle:active {
     color: #68c7c1;
     background-color: #565656;
   }
-  .dash-menu-item:active {
 
+  main.page {
+    border-top: 1px solid #eceeef;
+    padding: 32px 0 32px;
   }
 
   /* Rules for sizing the icon. */
