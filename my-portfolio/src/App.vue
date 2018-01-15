@@ -8,20 +8,26 @@
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
           <h1 class="display-3">Michela Federico</h1>
-          <p class="lead">"Do What you feel in your heart to be right - for you'll be criticized anyway"</p>
-          <p>(Eleanor Roosevelt)</p>
+          <p class="lead">Full Stack Developer</p>
+          <p>Python, Javascript, JQuery, HTML5, CSS3, Vue.js, Bootstrap, Jinja2, Require.js, Webpack</p>
         </div>
       </div>
       <div class="container dash-menu">
         <div class="row">
           <div class="col-lg-4 center">
-            <div class="dash-menu-item rounded-circle"></div>
+            <router-link to="/about" class="dash-menu-item rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">person_outline</i>
+            </router-link>
           </div>
           <div class="col-lg-4">
-            <div class="dash-menu-item rounded-circle"></div>
+            <router-link to="/works" class="dash-menu-item rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">code</i>
+            </router-link>
           </div>
           <div class="col-lg-4">
-            <div class="dash-menu-item rounded-circle"></div>
+            <router-link to="/contacts" class="dash-menu-item rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">message</i>
+            </router-link>
           </div>
         </div>
       </div>
@@ -78,7 +84,7 @@
     margin-bottom: 20px;
     padding-bottom: 9px;
 
-    color: #42b983;
+    color: #7bcec9;
   }
 
   .dash-menu {
@@ -87,10 +93,34 @@
   }
 
   .dash-menu-item {
-    display: inline-block;
     width: 140px;
     height: 140px;
-    background-color: #42b983;
+    display: inline-block;
+    background-color: #68c7c1;
+    margin-bottom: 10px;
   }
+  .dash-menu-item > .valign-middle { line-height: 140px !important; }
+
+  .dash-menu-item:hover {
+    color: #68c7c1;
+    background-color: #565656;
+  }
+  .dash-menu-item:active {
+
+  }
+
+  /* Rules for sizing the icon. */
+  .material-icons.md-18 { font-size: 18px; }
+  .material-icons.md-24 { font-size: 24px; }
+  .material-icons.md-36 { font-size: 36px; }
+  .material-icons.md-48 { font-size: 48px; }
+
+  /* Rules for using icons as black on a light background. */
+  .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+  .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+  /* Rules for using icons as white on a dark background. */
+  .material-icons.md-light { color: rgba(255, 255, 255, 1); }
+  .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 </style>
