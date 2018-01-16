@@ -3,41 +3,36 @@
     <main>
       <div class="jumbotron jumbotron-fluid text-center">
         <div class="container">
-          <h1 class="display-3">Michela Federico</h1>
-          <p class="lead">Full Stack Developer</p>
-          <p class="sub-lead">
-            Python • Javascript • JQuery • HTML5 • CSS3 • Vue.js • Bootstrap • Jinja2 • Require.js • Webpack
-          </p>
+          <h1 class="display-4">Michela Federico</h1>
+          <h1 class="display-6">Web Developer</h1>
         </div>
       </div>
-      <div class="container dash-menu">
-        <div class="row">
-          <div class="col-lg-4 center">
-            <router-link to="/about" class="dash-menu-item">
-              <div class="rounded-circle">
-                <i class="material-icons md-light md-48 valign-middle">person_outline</i>
-              </div>
-              <h2>About Me</h2>
-            </router-link>
-          </div>
-          <div class="col-lg-4">
-            <router-link to="/works" class="dash-menu-item">
-              <div  class="rounded-circle">
-                <i class="material-icons md-light md-48 valign-middle">code</i>
-              </div>
-              <h2>My Works</h2>
-            </router-link>
-          </div>
-          <div class="col-lg-4">
-            <router-link to="/contacts" class="dash-menu-item">
-              <div class="rounded-circle">
-                <i class="material-icons md-light md-48 valign-middle">message</i>
-              </div>
-              <h2>Contact Me</h2>
-            </router-link>
-          </div>
-        </div>
-      </div>
+      <ul class="dash-menu flex-container">
+        <li class="flex-item">
+          <router-link to="/about" class="dash-menu-item">
+            <div class="rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">person_outline</i>
+            </div>
+            <h2>About Me</h2>
+          </router-link>
+        </li>
+        <li class="flex-item">
+          <router-link to="/works" class="dash-menu-item">
+            <div  class="rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">code</i>
+            </div>
+            <h2>My Works</h2>
+          </router-link>
+        </li>
+        <li class="flex-item">
+          <router-link to="/contacts" class="dash-menu-item">
+            <div class="rounded-circle">
+              <i class="material-icons md-light md-48 valign-middle">message</i>
+            </div>
+            <h2>Contact Me</h2>
+          </router-link>
+        </li>
+      </ul>
     </main>
     <router-view></router-view>
   </div>
@@ -63,7 +58,7 @@
 	 * Typography
 	 */
   h1, h2, h3 {
-    font-family: Raleway;
+    font-family: 'Raleway';
   }
 
   h1 {
@@ -73,22 +68,35 @@
     color: #7bcec9;
   }
 
-  .sub-lead { word-spacing: 10px; }
-
   a:hover, a:active, a:focus, a:visited { text-decoration: none; }
+
+  .flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+  }
+  .flex-item { margin: 10px 30px; align-self: center; }
 
   .dash-menu {
     margin-bottom: 1.5rem;
     text-align: center;
   }
 
-  .dash-menu-item .rounded-circle {
+  .rounded-circle {
+    background-color: #68c7c1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 140px;
     height: 140px;
-    display: inline-block;
-    background-color: #68c7c1;
   }
-  .dash-menu-item .rounded-circle > .valign-middle { line-height: 140px !important; }
+
+  .dash-menu-item { margin: 20px; }
   .dash-menu-item > h2 { padding-top: 20px; color: #565656; }
   .dash-menu-item > h2:hover,
   .dash-menu-item > h2:active {
@@ -100,6 +108,19 @@
   .dash-menu-item .rounded-circle:active {
     color: #68c7c1;
     background-color: #565656;
+  }
+
+  // small & extra small devides
+  @media (max-width: 767px) {
+    .rounded-circle { width: 100px; height: 100px; }
+  }
+  // medium devices
+  @media (max-width: 991px) {
+    .rounded-circle { width: 120px; height: 120px; }
+  }
+  // large devices
+  @media (min-width: 992px) {
+    .rounded-circle { width: 140px; height: 140px; }
   }
 
   main.page {
