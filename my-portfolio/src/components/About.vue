@@ -23,7 +23,7 @@
           </p>
         </div>
         <div class="col-md-5 flex-container">
-          <img src="/static/images/avatar.jpeg" class="img-fluid rounded-circle mx-auto d-block flex-item" height="200px" width="200px" alt="avatar">
+          <img src="/static/images/profile-photo.jpeg" class="img-fluid mx-auto d-block flex-item--bottom" alt="profile-photo">
         </div>
       </div>
       <div class="row featurette">
