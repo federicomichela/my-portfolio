@@ -1,25 +1,16 @@
 /*
-   * Base structure
-   */
+ * Base structure
+ */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
-}
-
-/*
-   * Typography
-   */
-h1, h2, h3 {
   font-family: 'Raleway';
 }
 
-h1 {
-  margin-bottom: 20px;
-  padding-bottom: 9px;
+h1, h2, h3 { color: #7bcec9; }
 
-  color: #7bcec9;
-}
+.jumbotron { margin-bottom: 0; }
 
 a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 
@@ -27,59 +18,46 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: center;
 }
-.flex-item { margin: 10px 30px; align-self: center; }
+.flex-container__item { margin: 10px; }
+.flex-container__item--center { align-self: center; }
+.flex-container__item--bottom { align-self: flex-end; }
 
 .dash-menu {
-  margin-bottom: 1.5rem;
-  text-align: center;
+  margin: 1.5rem 0;
 }
-
-.rounded-circle {
+.dash-menu__item {
   background-color: #68c7c1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 140px;
   height: 140px;
+  font-size: 1.2em;
+}
+.dash-menu__item--round {
+  border-radius: 50%;
 }
 
-.dash-menu-item { margin: 20px; }
-.dash-menu-item > h2 { padding-top: 20px; color: #565656; }
-.dash-menu-item > h2:hover,
-.dash-menu-item > h2:active {
-  padding-top: 20px;
-  color: #565656;
-}
-
-.dash-menu-item .rounded-circle:hover,
-.dash-menu-item .rounded-circle:active {
+.dash-menu__item:hover,
+.dash-menu__item:active {
   color: #68c7c1;
   background-color: #565656;
 }
 
-// small & extra small devides
-@media (max-width: 767px) {
-  .rounded-circle { width: 100px; height: 100px; }
-}
-// medium devices
-@media (max-width: 991px) {
-  .rounded-circle { width: 120px; height: 120px; }
-}
-// large devices
-@media (min-width: 992px) {
-  .rounded-circle { width: 140px; height: 140px; }
+.dash-menu__item:hover i,
+.dash-menu__item:active i { display: none; }
+.dash-menu__item:focus {
+  border: 10px solid #a0dcd8;
 }
 
-main.page {
-  border-top: 1px solid #eceeef;
-  padding: 32px 0 32px;
-}
+.dash-menu__item__about:hover:after { content: 'About Me'; }
+.dash-menu__item__works:hover:after { content: 'My Works'; }
+.dash-menu__item__contacts:hover:after { content: 'Contact Me'; }
+
 
 /* Rules for sizing the icon. */
 .material-icons.md-18 { font-size: 18px; }
@@ -94,3 +72,19 @@ main.page {
 /* Rules for using icons as white on a dark background. */
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.featurette { margin: 2rem 0; }
+
+
+// small & extra small devices
+@media (max-width: 767px) {
+  .dash-menu__item { width: 100px; height: 100px; }
+}
+// medium devices
+@media (max-width: 991px) {
+  .dash-menu__item { width: 120px; height: 120px; }
+}
+// large devices
+@media (min-width: 992px) {
+  .dash-menu__item { width: 140px; height: 140px; }
+}

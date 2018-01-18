@@ -8,28 +8,19 @@
         </div>
       </div>
       <ul class="dash-menu flex-container">
-        <li class="flex-item">
-          <router-link to="/about" class="dash-menu-item">
-            <div class="rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">person_outline</i>
-            </div>
-            <h2>About Me</h2>
+        <li class="flex-container__item flex-container__item--center">
+          <router-link to="/about" class="dash-menu__item dash-menu__item--round dash-menu__item__about">
+            <i class="material-icons md-light md-48 valign-middle">person_outline</i>
           </router-link>
         </li>
-        <li class="flex-item">
-          <router-link to="/works" class="dash-menu-item">
-            <div  class="rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">code</i>
-            </div>
-            <h2>My Works</h2>
+        <li class="flex-container__item flex-container__item--center">
+          <router-link to="/works" class="dash-menu__item dash-menu__item--round dash-menu__item__works">
+            <i class="material-icons md-light md-48 valign-middle">code</i>
           </router-link>
         </li>
-        <li class="flex-item">
-          <router-link to="/contacts" class="dash-menu-item">
-            <div class="rounded-circle">
-              <i class="material-icons md-light md-48 valign-middle">message</i>
-            </div>
-            <h2>Contact Me</h2>
+        <li class="flex-container__item flex-container__item--center">
+          <router-link to="/contacts" class="dash-menu__item dash-menu__item--round dash-menu__item__contacts">
+            <i class="material-icons md-light md-48 valign-middle">message</i>
           </router-link>
         </li>
       </ul>

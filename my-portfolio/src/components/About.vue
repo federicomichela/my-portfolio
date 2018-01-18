@@ -1,8 +1,7 @@
 <template>
   <main class="page">
-    <h1 class="text-center">{{ pageName }}</h1>
-
     <div class="container">
+      <h1 class="text-center display-4">{{ pageName }}</h1>
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Who Am I?</h2>
@@ -23,7 +22,9 @@
           </p>
         </div>
         <div class="col-md-5 flex-container">
-          <img src="/static/images/profile-photo.jpeg" class="img-fluid mx-auto d-block flex-item--bottom" alt="profile-photo">
+          <img src="/static/images/profile-photo.jpeg"
+               class="img-fluid flex-container__item flex-container__item--bottom"
+               alt="profile-photo" width="400px">
         </div>
       </div>
       <div class="row featurette">
@@ -36,12 +37,12 @@
         </div>
       </div>
       <div class="row featurette">
-        <div class="col-md-5">
+        <div class="col-md-7">
           <h2 class="featurette-heading">Want to work together?</h2>
           <p class="lead">I am currently open to valuate new permanent work positions or small projects.</p>
         </div>
-        <div class="col-md-7 flex-container">
-          <router-link to="/contacts" class="btn btn-link flex-item">CONTACT ME NOW</router-link>
+        <div class="col-md-5 flex-container">
+          <router-link to="/contacts" class="btn btn-link flex-container__item flex-container__item--center">CONTACT ME NOW</router-link>
         </div>
       </div>
     </div>
