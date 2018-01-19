@@ -24,8 +24,6 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 .flex-container.flex-container--center { justify-content: center; }
 .flex-container.flex-container--bottom { justify-content: flex-end; }
 
-
-.flex-container__item { margin: 10px; }
 .flex-container__item--center { align-self: center; }
 .flex-container__item--bottom { align-self: flex-end; }
 .flex-container__item--bottom-right { align-self: flex-end; justify-self: right; }
@@ -42,6 +40,7 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
   width: 140px;
   height: 140px;
   font-size: 1.2em;
+  margin: 10px 30px;
 }
 .dash-menu__item--round {
   border-radius: 50%;
