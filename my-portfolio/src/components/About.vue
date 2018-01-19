@@ -21,10 +21,10 @@
             Looking for a new challenge that can stimulate me and improve my coding skills.
           </p>
         </div>
-        <div class="col-md-5 flex-container">
-          <img src="/static/images/profile-photo.jpeg"
-               class="img-fluid flex-container__item flex-container__item--bottom"
-               alt="profile-photo" width="400px">
+        <div class="col-md-5 flex-container flex-container--bottom">
+          <img src="/static/images/profile-photo2.jpg"
+               class="img-fluid flex-container__item flex-container__item--bottom-right"
+               alt="profile-photo" width="350px">
         </div>
       </div>
       <div class="row featurette">

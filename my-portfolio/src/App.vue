@@ -7,20 +7,11 @@
           <h1 class="display-6">Web Developer</h1>
         </div>
       </div>
-      <ul class="dash-menu flex-container">
-        <li class="flex-container__item flex-container__item--center">
-          <router-link to="/about" class="dash-menu__item dash-menu__item--round dash-menu__item__about">
-            <i class="material-icons md-light md-48 valign-middle">person_outline</i>
-          </router-link>
-        </li>
-        <li class="flex-container__item flex-container__item--center">
-          <router-link to="/works" class="dash-menu__item dash-menu__item--round dash-menu__item__works">
-            <i class="material-icons md-light md-48 valign-middle">code</i>
-          </router-link>
-        </li>
-        <li class="flex-container__item flex-container__item--center">
-          <router-link to="/contacts" class="dash-menu__item dash-menu__item--round dash-menu__item__contacts">
-            <i class="material-icons md-light md-48 valign-middle">message</i>
+
+      <ul class="dash-menu flex-container flex-container--center">
+        <li class="flex-container__item flex-container__item--center" v-for="menuItem in mainMenuItems">
+          <router-link v-bind:to="menuItem.path" class="dash-menu__item dash-menu__item--round" v-bind:class="menuItemClass(menuItem.name)">
+            <i class="material-icons md-light md-48 valign-middle"></i>
           </router-link>
         </li>
       </ul>
@@ -31,7 +22,27 @@
 
 <script>
   export default {
-    name: 'app'
+    name: 'app',
+
+    created() {
+      this.$parent.pages.forEach( page => {
+        if (page.type == 'mainMenu') {
+          this.mainMenuItems.push(page);
+        }
+      });
+    },
+
+    data() {
+      return {
+        mainMenuItems: [],
+      }
+    },
+
+    methods: {
+      menuItemClass: function(menuItemName) {
+        return 'dash-menu__item--' + menuItemName.toLowerCase();
+      }
+    }
   }
 </script>
 

@@ -20,11 +20,16 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
   list-style: none;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
 }
+.flex-container.flex-container--center { justify-content: center; }
+.flex-container.flex-container--bottom { justify-content: flex-end; }
+
+
 .flex-container__item { margin: 10px; }
 .flex-container__item--center { align-self: center; }
 .flex-container__item--bottom { align-self: flex-end; }
+.flex-container__item--bottom-right { align-self: flex-end; justify-self: right; }
+
 
 .dash-menu {
   margin: 1.5rem 0;
@@ -42,21 +47,21 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
   border-radius: 50%;
 }
 
+.dash-menu__item.router-link-active { border: 10px solid #a0dcd8; }
+
 .dash-menu__item:hover,
-.dash-menu__item:active {
-  color: #68c7c1;
-  background-color: #565656;
-}
+.dash-menu__item.router-link-active:hover { color: #68c7c1; background-color: #565656; border: 0px; }
 
 .dash-menu__item:hover i,
 .dash-menu__item:active i { display: none; }
-.dash-menu__item:focus {
-  border: 10px solid #a0dcd8;
-}
 
-.dash-menu__item__about:hover:after { content: 'About Me'; }
-.dash-menu__item__works:hover:after { content: 'My Works'; }
-.dash-menu__item__contacts:hover:after { content: 'Contact Me'; }
+.dash-menu__item--about i:after { font-family: "Material Icons"; content: "\e7ff"; }
+.dash-menu__item--works i:after { font-family: "Material Icons"; content: "\e86f"; }
+.dash-menu__item--contacts i:after { font-family: "Material Icons"; content: "\e0c9"; }
+
+.dash-menu__item--about:hover:after { content: 'About Me'; }
+.dash-menu__item--works:hover:after { content: 'My Works'; }
+.dash-menu__item--contacts:hover:after { content: 'Contact Me'; }
 
 
 /* Rules for sizing the icon. */
