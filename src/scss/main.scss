@@ -3,17 +3,34 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
+html, body {
   font-family: 'Raleway';
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
 }
 
 h1, h2, h3 { color: #7bcec9; }
 
 .jumbotron { margin-bottom: 0; }
 
-a:hover, a:active, a:focus, a:visited { text-decoration: none; }
+a { color: #ffffff; }
+a:hover, a:active, a:focus { text-decoration: none; }
 
+.flex-row,
 .flex-container {
   padding: 0;
   margin: 0;
@@ -27,6 +44,16 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 .flex-container__item--center { align-self: center; }
 .flex-container__item--bottom { align-self: flex-end; }
 .flex-container__item--bottom-right { align-self: flex-end; justify-self: right; }
+
+.flex-col { flex: 1; }
+
+footer .flex-row { background-color: #393939; padding: 20px; }
+footer .flex-row:first-child { background-color: #4c4c4c; }
+footer a:hover,
+footer a:active,
+footer a:focus { color: #7bcec9; }
+
+.ext-link__icon { font-size: 2em; margin-left: 10px; }
 
 .btn {
   padding: 20px;
@@ -69,11 +96,11 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 
 .dash-menu__item--about i:after { font-family: "Material Icons"; content: "\e7ff"; }
 .dash-menu__item--works i:after { font-family: "Material Icons"; content: "\e86f"; }
-.dash-menu__item--contacts i:after { font-family: "Material Icons"; content: "\e0c9"; }
+.dash-menu__item--connect i:after { font-family: "Material Icons"; content: "\e0c9"; }
 
 .dash-menu__item--about:hover:after { content: 'About Me'; }
 .dash-menu__item--works:hover:after { content: 'My Works'; }
-.dash-menu__item--contacts:hover:after { content: 'Contact Me'; }
+.dash-menu__item--connect:hover:after { content: 'Connect'; }
 
 
 /* Rules for sizing the icon. */
@@ -91,7 +118,6 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 .featurette { margin: 2rem 0; }
-
 
 // small & extra small devices
 @media (max-width: 767px) {

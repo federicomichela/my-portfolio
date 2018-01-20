@@ -8,7 +8,7 @@ import Router from 'vue-router'
 import About from '@/components/About'
 import Project from '@/components/Project'
 import Works from '@/components/Works'
-import Contacts from '@/components/Contacts'
+import Connect from '@/components/Connect'
 
 Vue.config.productionTip = false;
 
@@ -38,9 +38,9 @@ let pages = [
     type: 'mainMenu',
   },
   {
-    path: '/contacts',
-    name: 'Contacts',
-    component: Contacts,
+    path: '/connect',
+    name: 'Connect',
+    component: Connect,
     type: 'mainMenu',
   }
 ];
