@@ -28,6 +28,14 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 .flex-container__item--bottom { align-self: flex-end; }
 .flex-container__item--bottom-right { align-self: flex-end; justify-self: right; }
 
+.btn {
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #68c7c1;
+  color: #fff;
+  -webkit-transition: height 10s linear 10s; /* For Safari 3.1 to 6.0 */
+  transition: height 10s linear 10s;
+}
 
 .dash-menu {
   margin: 1.5rem 0;
@@ -48,8 +56,13 @@ a:hover, a:active, a:focus, a:visited { text-decoration: none; }
 
 .dash-menu__item.router-link-active { border: 10px solid #a0dcd8; }
 
+.btn:hover,
 .dash-menu__item:hover,
-.dash-menu__item.router-link-active:hover { color: #68c7c1; background-color: #565656; border: 0px; }
+.dash-menu__item.router-link-active:hover {
+  color: #fff;
+  background-color: #565656;
+  border: 00px solid #a0dcd8;
+}
 
 .dash-menu__item:hover i,
 .dash-menu__item:active i { display: none; }
