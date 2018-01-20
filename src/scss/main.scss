@@ -54,6 +54,7 @@ footer a:active,
 footer a:focus { color: #7bcec9; }
 
 .ext-link__icon { font-size: 2em; margin-left: 10px; }
+.ext-link__icon--sm {font-size: 1em;}
 
 .btn {
   padding: 20px;
@@ -118,6 +119,13 @@ footer a:focus { color: #7bcec9; }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
 
 .featurette { margin: 2rem 0; }
+
+.mirror i {
+  -moz-transform: scale(-1, -1);
+  -o-transform: scale(-1, -1);
+  -webkit-transform: scale(-1, -1);
+  transform: scale(-1, -1);
+}
 
 // small & extra small devices
 @media (max-width: 767px) {
