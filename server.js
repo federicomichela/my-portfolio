@@ -9,6 +9,8 @@ const app = express();
 
 // app.use(express.static(path.resolve(path.join(__dirname, '/dist'))));
 
+app.set('view engine', 'html');
+
 app.use(serveStatic(__dirname + "/dist"));
 app.get('/', (req, res) => {
   res.render('index');
